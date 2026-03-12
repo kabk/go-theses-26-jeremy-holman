@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+/* 
+  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
+  or 'transfonter' (https://transfonter.org)
+  to generate your own font for the web from .ttf or .oft files 
+*/
+
+ 
+                    
+@font-face {
+  font-family: exposure50;
+  src: url("/fonts/exposuretrial-50-webfont.woff");
+  
+}
+
+@font-face {
+  font-family: exposure30;
+  src: url("/fonts/ExposureTrial[-30].otf");
+  
+}
+
+@font-face {
+  font-family: rubikmonoone;
+  src: url("/fonts/RubikMonoOne-Regular.ttf");
+}
+
+
+
+
+/* VARIABLES */
+
+:root {
+  /* Color values */
+  --color-background: rgba(255,255,255,1);
+  --color-text: rgba(0,0,0,1);
+  --color-text-link:rgba(142, 142, 142, 0.4);
+  --color-text-link-hover: rgba(142, 142, 142, 0.4);
+  /* Font values */
+  --font-size: 24px;
+  /* Margin values */
+  --margin: 2.5rem;
+
+
+  /* Examples of possible variables */
+
+  --font-size-heading: calc(var(--font-size) * 2);
+  --font-size-subheading: calc(var(--font-size) * 1.25);
+  --font-size-caption: calc(var(--font-size) * 0.875);
+
+  --margin-xs: calc(var(--margin) * 0.5);
+  --margin-s: calc(var(--margin) * 1);
+  --margin-m: calc(var(--margin) * 2);
+  --margin-l: calc(var(--margin) * 3);
+  --margin-xl: calc(var(--margin) * 5);
+
+}
+
+
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  position:relative;
+  background-color: var(--color-background);
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  width:100%;
+  height:auto;
+  overflow-y:auto;
+  background-color: black;
+  color: #b44e37;
+list-style-type: none;
+}
+
+a {
+  color: var(--color-text-link);
+  /* text-decoration: underline; */
+  color: white;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  /* text-decoration: underline; */
+}
+
+
+h1{
+  /* h1 style */
+  
+  font-family: 'exposure50';
+    font-size: clamp(
+    var(--font-size-heading),
+    4vw,
+    calc(var(--font-size-heading) * 1.25)
+  );
+  font-size: 75pt;
+  text-align: left;
+  line-height: 0.8;
+  max-width: 400px;
+}
+
+h2{
+  /* h2 style */
+}
+
+h3{
+  /* h3 style */
+}
+
+h4, h5, h6{
+  /* h4-h5-h6 style */
+}
+
+p{
+  /* paragraph style */
+}
+
+ol, ul{
+  /* ordered list and unordered list styles */
+  list-style-type: none;
+
+}
+
+blockquote{
+  /* blockquote element style */
+}
+
+hr{
+  /* horizontal rule style */
+}
+
+ /* ------------------------HOVER TEXT------------------------------------ */
+ /* ------------------------SCRIPT DIV------------------------------------ */
+.script1 {
+   position: relative;
+   left: 350px;
+}
+
+.script2 {
+  position: relative;
+  top: 50px;
+  left: -150px;
+}
+
+
+.hover-text {
+  display: inline-block;
+  font-size: 35px;
+  font-family: exposure30;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  left: 200px;
+  overflow: hidden;
+  color: #b44e37;
+  transition: color 0.5s ease;
+  width: 485px; /*change */
+}
+
+/* Hide the "hover" text by default */
+.hover-text .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  color: aliceblue;
+}
+
+/* Show the "hover" text on hover */
+.hover-text:hover .hover-content {
+  opacity: 1;
+}
+
+/* Hide the default text on hover */
+.hover-text:hover .default-content {
+  opacity: 0;
+}
+
+
+
+ /* ------------------------SLIDER FOOTER------------------------------------ */
+ 
+.tag-lista2 {
+  width: 14rem;  /* Change the length of slider*/
+  max-width: 105vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 4rem 0;         /* Gap between the two sliders*/
+  position: relative;
+  padding: 0.1rem 0;
+  overflow: hidden;
+  
+}
+
+.loop-slidera2 {
+  position:static;
+  margin-top: -300pt; /* Change the start of top length of slider*/
+  /* background-color: aquamarine;  */
+}
+
+.innera2 {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+  
+}
+
+.taga2 {
+  width: 10;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  /* gap:  0.01rem; */
+  /* background-color: aqua; */
+  color: #c9c3c36f;
+  font-family: 'exposure_trial-50';
+  font-weight: bolder;
+  font-size: 14pt;
+  padding: 2rem 0rem;
+  margin-right: -2.45rem; /* Must used margin-right instead of gap for the loop to be smooth */
+  margin-inline-start: 2.7rem;
+  margin-top: 360px;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* .fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(229, 182, 182), transparent 5%, transparent 85%, rgb(229, 182, 182));
+  position: absolute;
+  inset: 0;
+} */
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  padding: var(--margin);
+}
+
+/* navigation */
+ 
+nav{
+  
+}
+
+/* content */
+
+main{
+ 
+}
+
+summary{
+  
+}
+
+/* ----------------------------VIDEO---------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+
+figure{
+  margin:0;
+  padding:0;
+}
+
+.video1{
+  width: 40%;
+  margin-left: 800px;
+}
+
+.video2{
+  width: 40%;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+
+
+/* UTILITY CLASSES */
+
+/* hide desktop mobile etc */
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+
+
+
+/* WEBSITE MEDIA QUERIES */
+
+/* responsive typeface for various breaking points, sets the default 'rem' value */
+@media (max-width: 299px) { :root{--font-size: 18px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 299px) and (max-width: 340px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 340px) and (max-width: 440px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 441px) and (max-width: 779px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 780px) and (max-width: 992px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 993px) and (max-width: 1200px) { :root{--font-size: 21px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 1201px) and (max-width: 1320px) { :root{--font-size: 22px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 1321px) { :root{--font-size: 24px;} html, body {font: var(--font-size) var(--font-text); } }
+
+/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
+/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
+
+@media (max-width: 779px) {
+
+  /* your 'mobile' overriding css properties here */
+
+
+
+  /* utility classes, mobile */
+
+  .desktop-only{
+    display:none;
+  }
+
+  .mobile-only{
+    display:block;
+  }
+
+}
+
+
+
+/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+@media (max-width: 339px) {
+
+  /* your overriding css properties here */
+
+}
+
+
+
+/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+   /* your overriding css properties here */
+
+}
+
+
+
+/* use this query to apply style for 'small' desktop screens */
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* your overriding css properties here */
+
+}
+
+

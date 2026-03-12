@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'ExposureItalicTrial50';
+    src: url('ExposureItalicTrial--50.woff2') format('woff2'),
+        url('ExposureItalicTrial--50.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
