@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: haas;
-  src: url("/assets/fonts/NeueHaasGrotDisp-65Medium.otf");
+  src: url("/assets/fonts/HaasGrotDisp-65Medium.woff2");
 }
 
 
@@ -419,7 +419,7 @@ summary{
 .script29 {
   margin-left: 5%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: -250px;          /* Move it upwards by 10% */
+  top: -100px;          /* Move it upwards by 10% */
 }
 
 .script30 {
@@ -474,7 +474,7 @@ summary{
 .script38 {
   margin-left: 0%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: -250px;          /* Move it upwards by 10% */
+  top: -180px;          /* Move it upwards by 10% */
   text-align: right;
 }
 
@@ -505,7 +505,7 @@ summary{
 .script43 {
   margin-left: 65%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: 250px;          /* Move it upwards by 10% */
+  top: 200px;          /* Move it upwards by 10% */
 }
 
 /* --------------------------PAGE 3-------------------------------- */
@@ -569,7 +569,7 @@ summary{
 .script53 {
   margin-left: 5%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: -200px;          /* Move it upwards by 10% */
+  top: -160px;          /* Move it upwards by 10% */
 }
 
 .script54 {
@@ -593,7 +593,7 @@ summary{
 .script57 {
   margin-left: 55%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: -200px;          /* Move it upwards by 10% */
+  top: -130px;          /* Move it upwards by 10% */
 }
 
 .script58 {
@@ -611,11 +611,11 @@ summary{
 .script60 {
   margin-left: 0%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: -250px;          /* Move it upwards by 10% */
+  top: -160px;          /* Move it upwards by 10% */
 }
 
 .script61 {
-  margin-left: 25%;    /* Adjust with percentage for responsiveness */
+  margin-left: 20%;    /* Adjust with percentage for responsiveness */
   position: relative;
   top: -50px;          /* Move it upwards by 10% */
 }
@@ -635,7 +635,7 @@ summary{
 .script64 {
   margin-left: 54%;    /* Adjust with percentage for responsiveness */
   position: relative;
-  top: 250px;          /* Move it upwards by 10% */
+  top: 50px;          /* Move it upwards by 10% */
 }
 
 .script65 {
@@ -1100,7 +1100,7 @@ figure{
 .video34 {
   width: 100%;        /* Ensure it takes up full available width */
   max-width: 800px;   /* Limit the maximum width */
-  margin-left: 10%;  /* Center the video horizontally */
+  margin-left: 5%;  /* Center the video horizontally */
   margin-right: auto; /* Center the video horizontally */
   display: block;     /* Make it block-level so it centers properly */ 
   /* Optionally adjust the height to maintain aspect ratio */
@@ -1176,7 +1176,36 @@ figure{
 @media (max-width: 779px) {
 
   /* your 'mobile' overriding css properties here */
+  .hover-text {
+    font-size: clamp(16px, 5vw, 30px);  /* Make text smaller on mobile */
+    text-align: center;  /* Center the text */
+  }
 
+    .video1, .video2, .video3, .video4, .video5, .video6, .video7, .video8, .video9, .video10, .video11, .video12, .video13, .video14, .video15, .video16, .video17, .video18, .video19,
+    .video20, .video21, .video22, .video23, .video24, .video25, .video26, .video27, .video28, .video29, .video30, .video31, .video32, .video33, .video34, .video35, .video36 {
+  width: 60%;        /* Reduce width on smaller screens */
+  max-width: 80%;   /* Allow full-width on very small screens */
+}
+
+.video37 {width: 80%;        /* Reduce width on smaller screens */
+  max-width: 100%;   /* Allow full-width on very small screens */
+}
+
+@media (max-width: 779px) {
+  h1 {
+    margin-left: 20px; /* Adjust this to push it a bit right on smaller screens */
+    text-align: center; /* Optionally center on mobile */
+    font-size: clamp(2rem, 6vw, 50pt); /* Smaller text on mobile */
+  }
+  h3 {
+    margin-left: 20px; /* Adjust this to push it a bit right on smaller screens */
+    text-align: center; /* Optionally center on mobile */
+    font-size: clamp(0.5rem, 6,5vw, 5pt); /* Smaller text on mobile */
+  }
+
+  .logo {
+    width: 20vw; /* slightly bigger relative size on small screens */
+  }
 
 
   /* utility classes, mobile */
@@ -1207,36 +1236,7 @@ figure{
 
 @media (max-width: 779px) and (orientation: landscape) {}
 
-    .hover-text {
-      font-size: clamp(16px, 5vw, 30px);  /* Make text smaller on mobile */
-      text-align: center;  /* Center the text */
-    }
 
-      .video1, .video2, .video3, .video4, .video5, .video6, .video7, .video8, .video9, .video10, .video11, .video12, .video13, .video14, .video15, .video16, .video17, .video18, .video19,
-      .video20, .video21, .video22, .video23, .video24, .video25, .video26, .video27, .video28, .video29, .video30, .video31, .video32, .video33, .video34, .video35, .video36 {
-    width: 60%;        /* Reduce width on smaller screens */
-    max-width: 80%;   /* Allow full-width on very small screens */
-  }
-
-  .video37 {width: 80%;        /* Reduce width on smaller screens */
-    max-width: 100%;   /* Allow full-width on very small screens */
-  }
-
-  @media (max-width: 779px) {
-    h1 {
-      margin-left: 20px; /* Adjust this to push it a bit right on smaller screens */
-      text-align: center; /* Optionally center on mobile */
-      font-size: clamp(2rem, 6vw, 50pt); /* Smaller text on mobile */
-    }
-    h3 {
-      margin-left: 20px; /* Adjust this to push it a bit right on smaller screens */
-      text-align: center; /* Optionally center on mobile */
-      font-size: clamp(0.5rem, 6,5vw, 5pt); /* Smaller text on mobile */
-    }
-
-    .logo {
-      width: 20vw; /* slightly bigger relative size on small screens */
-    }
   
 }
 
