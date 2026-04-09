@@ -14,29 +14,29 @@
                     
 @font-face {
   font-family: exposure50;
-  src: url("/fonts/exposuretrial-50-webfont.woff");
+  src: url("/assets/fonts/exposuretrial-50-webfont.woff");
   
 }
 
 @font-face {
   font-family: exposure30;
-  src: url("/fonts/ExposureTrial[-30].otf");
+  src: url("/assets/fonts/ExposureTrial[-30].otf");
   
 }
 
 @font-face {
   font-family: rubikmonoone;
-  src: url("/fonts/RubikMonoOne-Regular.ttf");
+  src: url("/assests/fonts/RubikMonoOne-Regular.ttf");
 }
 
 @font-face {
   font-family: avigea;
-  src: url("/fonts/Avigea.otf");
+  src: url("/assets/fonts/Avigea.otf");
 }
 
 @font-face {
   font-family: haas;
-  src: url("/fonts/NeueHaasGrotDisp-65Medium.otf");
+  src: url("/assets/fonts/NeueHaasGrotDisp-65Medium.otf");
 }
 
 
